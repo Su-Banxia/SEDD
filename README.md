@@ -1,5 +1,7 @@
 # Score Entropy Discrete Diffusion（SEDD） 复现和微调
 
+原官方仓库链接：[Score-Entropy-Discrete-Diffusion](https://github.com/louaaron/Score-Entropy-Discrete-Diffusion)
+
 具体数学原理见 `SEDD.md`，个人理解可能存在很多错漏，欢迎指出
 
 ## 项目结构
