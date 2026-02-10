@@ -4,7 +4,7 @@
 
 ## 项目结构
 
-```css
+```tex
 Score-Entropy-Discrete-Diffusion/
 ├── configs/                        # Hydra 配置文件
 │   ├── config.yaml                 #   主配置（训练、采样、数据、优化器等）
@@ -64,20 +64,16 @@ Score-Entropy-Discrete-Diffusion/
 
 ---
 
-## 环境配置
+## 环境配置与数据准备
 
 快速安装：
 
 ```bash
-git clone <repo_url>
+git clone https://github.com/Su-Banxia/SEDD.git
 cd Score-Entropy-Discrete-Diffusion
 conda env create -f environment.yml
 conda activate sedd
 ```
-
----
-
-## 数据准备
 
 运行准备脚本：
 
@@ -104,7 +100,7 @@ python run_train.py ngpus=4
 # uniform 图 + geometric 噪声
 python run_train.py ngpus=4 noise.type=geometric graph.type=uniform model.scale_by_sigma=False
 
-# medium 模型
+# 以 medium 模型为例
 python run_train.py ngpus=4 model=medium training.accum=2
 ```
 
@@ -168,5 +164,3 @@ python compare_models.py
 ```bash
 python run_train.py ngpus=4 training.batch_size=64 optim.lr=1e-4 model=medium
 ```
-
-支持 Hydra 的 multi-run 与 Submitit/SLURM 集成，请查阅 configs 中的注释。
